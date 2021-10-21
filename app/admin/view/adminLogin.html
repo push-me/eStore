@@ -1,5 +1,5 @@
-<div ng-controller="authCtrl">
-    <div class="alert alert-info" ng-hide="authenticationError">
+<div ng-controller="authCtrl" id="loginForm">
+    <div class="alert alert-info text-center" ng-hide="authenticationError">
         Enter your e-mail and password and click to log in button
     </div>
 
@@ -7,7 +7,7 @@
         Error message: {{authenticationError.message}} <br>
         Error code: {{authentication.code}}
     </div>
-    <form name="authForm" novalidate>
+    <form name="authForm" class="text-center" novalidate>
         <div class="form-group">
             <label>e-mail:</label>
             <input type="email" ng-model="email" class="form-control" required>
