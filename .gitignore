@@ -3,6 +3,7 @@ logs/*
 node_modules/
 tmp
 debug.log
+package.json
 package-lock.json
 
 
