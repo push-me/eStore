@@ -72,7 +72,7 @@ angular.module('eStoreAdmin')
                 $scope.$apply($scope.products);
             })
         };
-        $scope.getProducts();
+        
         $scope.userData=null;//initial data(name,description,category,price) for input strings
         $scope.userIndex;// what product is selected for editing or deleting
 
