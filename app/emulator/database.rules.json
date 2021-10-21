@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "storeData": {
+      ".read": "true || auth.provider=='password' && auth.token.email=='bob@shmob.gg'",
+      ".write": "auth.provider=='password' && auth.token.email=='bob@shmob.gg'"
+    },
+    "orders": {
+      ".read": "auth.provider=='password' && auth.token.email=='bob@shmob.gg'",
+      ".write": "true || auth.provider=='password' && auth.token.email=='bob@shmob.gg'"
+    }
+  }
+}

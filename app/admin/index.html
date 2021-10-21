@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="eStoreAdmin">
+<head>
+    <title>Administration</title>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminStyles.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="../firebase.config.js"></script>
+    <script src="../dependencies/angular-route.min.js"></script>
+    <script src="eStoreAdmin.module.js"></script>
+    <script src="adminControllers.js"></script>
+    <script src="route-config.admin.js"></script>
+</head>
+
+<body>
+    <ng-view/>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "orders" : {
+    "-MFhRpdByXeJqJ-mpBNE" : {
+      "address" : "sds",
+      "city" : "bbxxx",
+      "country" : "gfgfgf",
+      "name" : "vff",
+      "products" : [ {
+        "count" : 1,
+        "id" : 3,
+        "name" : "butterfly",
+        "price" : 5
+      } ],
+      "zip" : 3
+    },
+    "-MFhVco_IE02S37m0ycd" : {
+      "address" : "fsdfwe",
+      "city" : "krakow",
+      "country" : "sdf",
+      "name" : "fd",
+      "products" : [ {
+        "count" : 1,
+        "id" : 1,
+        "name" : "BMX bike e500",
+        "price" : 3
+      } ],
+      "zip" : 453
+    },
+    "-MFhWHKpxsHUf6x97bFo" : {
+      "address" : "boilerst",
+      "city" : "bramenghem",
+      "country" : "eewr",
+      "name" : "dolly",
+      "products" : [ {
+        "count" : 1,
+        "id" : 1,
+        "name" : "BMX bike e500",
+        "price" : 3
+      } ],
+      "zip" : 666
+    },
+    "-MFhaneyGNCtTVr3vZJi" : {
+      "address" : "k",
+      "city" : "hghhhh",
+      "country" : "3ffee",
+      "name" : "fdfd",
+      "products" : [ {
+        "count" : 1,
+        "id" : 2,
+        "name" : "electric bike",
+        "price" : 2
+      } ],
+      "zip" : 454
+    },
+    "-MS3xn_txVBcot9JBpuz" : {
+      "address" : "big street",
+      "city" : "boooosh",
+      "country" : "porta-vila",
+      "name" : "checker",
+      "products" : [ {
+        "count" : 1,
+        "id" : 1,
+        "name" : "BMX bike e500",
+        "price" : 3
+      } ],
+      "zip" : 456
+    },
+    "-MS9RTMUfa7hG9fGmTLG" : {
+      "address" : "small street",
+      "city" : "dont know",
+      "country" : "sweden",
+      "name" : "bobby",
+      "products" : [ {
+        "count" : 1,
+        "id" : 2,
+        "name" : "electric bike",
+        "price" : 2
+      }, {
+        "count" : 1,
+        "id" : 3,
+        "name" : "butterfly",
+        "price" : 5
+      } ],
+      "zip" : 2222
+    }
+  },
+  "storeData" : [ {
+    "category" : "bikes",
+    "description" : "perfect for tricks",
+    "id" : 1,
+    "name" : "BMX bike e500",
+    "price" : 3
+  }, {
+    "category" : "bikes",
+    "description" : "perfect for urban travel",
+    "id" : 2,
+    "name" : "electric bike",
+    "price" : 2
+  }, {
+    "category" : "bikes",
+    "description" : "a bike for kids",
+    "id" : 3,
+    "name" : "butterfly",
+    "price" : 5
+  }, {
+    "category" : "bikes",
+    "description" : "a bike that allows you to improve your figure",
+    "id" : 4,
+    "name" : "fitness bike",
+    "price" : 2
+  }, {
+    "category" : "soccer",
+    "description" : "FIFA-approved size and weight",
+    "id" : 5,
+    "name" : "succer ball",
+    "price" : 25.95
+  }, {
+    "category" : "soccer",
+    "description" : "gives your playing field a professional touch",
+    "id" : 6,
+    "name" : "corner flags",
+    "price" : 15.99
+  }, {
+    "category" : "chess",
+    "description" : "Improves your brain efficiency by 75%",
+    "id" : 7,
+    "name" : "Thinking cap",
+    "price" : 15
+  }, {
+    "category" : "chess",
+    "description" : "a fun game for the family",
+    "id" : 8,
+    "name" : "unstead chair",
+    "price" : 25.99
+  } ]
+}

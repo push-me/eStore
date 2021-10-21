@@ -1,0 +1,31 @@
+<h1 >Your Cart</h1>
+<table class="table" ng-controller="checkoutController">
+    <thead>
+        <th scope="col">Quantity</th>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+        <th scope="col">Subtotal</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in cartData">
+            <td>{{item.count}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price | currency}}</td>
+            <td>{{item.price*item.count | currency}}</td>
+            <td class="removeBtnCell"><button class="btn btn-warning" ng-click="remove(item.id)">Remove</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>{{countTotal() | currency}}</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-center">
+                <a href="#!/products" role="button" class="btn btn-primary">Continue shopping</a>
+                <a href="#!/placeorder" role="button" class="btn btn-primary">Place order now</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

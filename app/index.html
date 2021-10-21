@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="eStore">
+  <head>
+    <title>test</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="dependencies/angular-animation.js"></script>
+    <script src="firebase.config.js"></script>
+    <script src="returnUnique/returnUnique.module.js"></script>
+    <script src="returnUnique/returnUnique.filter.js"></script>
+    <script src='eStore.module.js'></script>
+    <script src="dependencies/angular-route.min.js"></script>
+    <script src="dependencies/angular-resource.min.js"></script>
+    <script src='route-config.js'></script>
+    <script src="eStore.controller.js"></script>
+    <script src="productList.controller.js"></script>
+    <script src="pageCount.filter/pageCount.filter.js"></script>
+    <script src="range.filter/range.filter.js"></script>
+    <script src="cart/cart.module.js"></script>
+    <script src="cart/cart.service.js"></script>
+    <script src="cart/cartWidget.directive.js"></script>
+    <script src="checkout/checkout.controller.js"></script>
+
+    
+  </head>
+
+  <body ng-controller="eStoreController" ng-init="getData()">
+    <nav class="navbar bg-dark">
+      <a class="navbar-brand text-white-50" href="">HEADER</a>
+      <cart-widget class="text-white-50"/>
+    </nav>
+
+    <div class="alert alert-danger" role="alert" ng-show="data.error">
+      Error {{data.error.status}}. The product data was not loaded
+      <a href="/index.html" class="alert-link">click and try again</a>
+    </div>
+
+    <div class="preloader d-flex justify-content-center mt-5" ng-hide="data.products" onload="getData()">
+      <div class= "spinner-border text-dark" role="status"></div>
+      <h4 class="" >LOADING...</h4>
+    </div>
+    <div ng-view class="ngFade" ng-show="data.products"></div>
+
+    
+  </body>
+</html>

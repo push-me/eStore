@@ -1,0 +1,61 @@
+<h1>Check out now</h1>
+<p>Please enter your details and we will deliver your goods right away</p>
+<form class="form bg-light w-50" name="shippingForm">
+    <div class="form-group">
+        <label ><b>Name</b></label>
+        <input type="text" name="name" class="form-control" ng-model="data.shipping.name" required/>
+        <span class="error" ng-show="shippingForm.name.$error.required">
+            Please enter your name
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label><b>Country</b></label>
+        <input type="text" name="country" class="form-control" ng-model="data.shipping.country" required/>
+        <span class="error" ng-show="shippingForm.country.$error.required">
+            Please enter your country
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label><b>City</b></label>
+        <input type="text" name="city" class="form-control" ng-model="data.shipping.city" required/>
+        <span class="error" ng-show="shippingForm.city.$error.required">
+            Please enter your city
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label><b>Address</b></label>
+        <input type="text" name="address" class="form-control" ng-model="data.shipping.address" required/>
+        <span class="error" ng-show="shippingForm.address.$error.required">
+            Please enter your address
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label><b>Zip</b></label>
+        <input type="number" name="zip" class="form-control" ng-model="data.shipping.zip" required/>
+        <span class="error" ng-show="shippingForm.zip.$error.required">
+            Please enter your zip code
+        </span>
+    </div>
+
+    <h4>Options</h4>
+    <div class="form-group form-check">
+        <label>
+            <input type="checkbox" class="form-check-input" ng-model="data.shipping.giftwrap"/>
+            Gift wrap these items
+        </label>
+    </div>
+
+    <div class="text-center">
+        <button 
+        type="submit" 
+        class="btn btn-primary" 
+        ng-disabled="shippingForm.$invalid"
+        ng-click="sendOrder(data.shipping)">
+            Complete order
+        </button>
+    </div>
+</form>

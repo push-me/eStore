@@ -1,0 +1,38 @@
+.prodList {
+    height:9vh;
+}
+
+.price-tag {
+    padding: .375rem .75rem;
+    border: solid 1px transparent;
+    font-size: 1rem;
+}
+
+.removeBtnCell {
+    border-top: none;
+}
+
+.ng-invalid {
+    background-color: lightpink;
+}
+
+.ng-valid {
+    background-color: lightgreen;
+}
+
+span.error {
+    background-color: red;
+    font-weight: bold;
+}
+
+.ngFade.ng-enter,.ngFade.ng-hide-remove{
+    transition: 1s linear all;
+    opacity:0;
+}
+
+.ngFade.ng-enter-active,.ngFade.ng-hide-remove-active {
+    opacity:1;
+}
+
+
+

@@ -1,0 +1,22 @@
+logs/*
+!.gitkeep
+node_modules/
+tmp
+debug.log
+package-lock.json
+
+
+# Logs
+app/emulator/database-debug.log
+app/emulator/logs
+app/emulator/*.log
+app/emulator/npm-debug.log*
+app/emulator/yarn-debug.log*
+app/emulator/yarn-error.log*
+app/emulator/firebase-debug.log*
+app/emulator/firebase-debug.*.log*
+
+# Firebase cache
+app/emulator/.firebase/
+
+

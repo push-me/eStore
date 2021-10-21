@@ -1,0 +1,32 @@
+<div ng-controller="authCtrl">
+    <div class="alert alert-info" ng-hide="authenticationError">
+        Enter your e-mail and password and click to log in button
+    </div>
+
+    <div class="alert alert-danger" ng-show="authenticationError">
+        Error message: {{authenticationError.message}} <br>
+        Error code: {{authentication.code}}
+    </div>
+    <form name="authForm" novalidate>
+        <div class="form-group">
+            <label>e-mail:</label>
+            <input type="email" ng-model="email" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" ng-model="password" class="form-control" required>
+        </div>
+        <div class="text-center">
+            <button
+            id="authButton" 
+            ng-disabled="authForm.$invalid" 
+            ng-click="authenticate(email,password)" 
+            class="btn btn-primary">
+            Log In
+            </button>
+        </div>
+        
+        </form>
+</div>
+

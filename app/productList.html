@@ -1,0 +1,60 @@
+<div class="card"  ng-controller="productListController" ng-hide="data.error">
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <button 
+          class="btn btn-block btn-light btn-lg" 
+          ng-click=selectCategory()>
+          Home
+          </button>
+
+          <button 
+          ng-repeat="category in uniqueCategories | orderBy:'category'"
+          ng-click=selectCategory(category)
+          ng-class=setSelectedClass(category)>
+            {{category}}
+          </button>
+        </div>
+
+        <div class="col">
+          <div 
+          class="card prodList mb-3 bg-light flex-row justify-content-between" 
+          ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:totalPages">
+            <div>
+              <h3>
+                <strong>{{item.name}}</strong>
+              
+              </h3>
+              <span>{{item.description}}</span>
+            </div>
+            <div class="d-flex flex-column justify-content-around">
+              <span class="badge badge-primary price-tag">
+                {{item.price | currency}}
+              </span>
+              <button class="btn btn-success" ng-click="addToCart(item)">Add to Cart</button>
+            </div>
+            
+            
+          </div>
+
+          <div class="btn-toolbar bg-white justify-content-end">
+            <div class=" btn-group">
+              <button 
+              ng-repeat="page in data.products |filter:categoryFilterFn | pageCount:totalPages"
+              ng-click="selectPage($index+1)"
+              ng-class="setSelectedClass($index+1)">
+                {{$index+1}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+      
+      
+  </div>
