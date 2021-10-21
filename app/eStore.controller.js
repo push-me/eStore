@@ -24,10 +24,8 @@ angular.module('eStore')
                     $scope.data.orderError = error;
                 } else { //success
                     $scope.orderKey = orderKey;
-                    $location.path('/complete');
-                    $location.replace();
                     $scope.cartData = [];
-                    $scope.$apply($scope.cartData);
+                    changePath('/complete',$scope.cartData);
                 }
             })
         };
@@ -38,9 +36,7 @@ angular.module('eStore')
             }).then(function(snapshot) { //success
                 $scope.data.products = snapshot.val();            
                 $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
-                console.log(snapshot.val());
-                $location.path('/products');
-                $scope.$apply($scope.data.products);
+                changePath('/products',$scope.data.products);
             }).catch(function(error) {
                 console.log('errorCode: '+ error.code);
                 console.log('error message: ' + error.message);

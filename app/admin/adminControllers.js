@@ -4,13 +4,10 @@ angular.module('eStoreAdmin')
     .controller('authCtrl', ['$scope','$location',function authCtrl($scope,$location) {
         //user authentication
         $scope.authenticate = function(email,password) {
-            console.log('before sending')
             firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
                 //signed in
-                console.log('success');
                 $location.path('/main');
                 $scope.$apply();
-           
             })
             .catch(function(error) {
                 $scope.authenticationError = error;
@@ -72,7 +69,7 @@ angular.module('eStoreAdmin')
                 $scope.$apply($scope.products);
             })
         };
-        $scope.getProducts();
+        
         $scope.userData=null;//initial data(name,description,category,price) for input strings
         $scope.userIndex;// what product is selected for editing or deleting
 
@@ -84,12 +81,12 @@ angular.module('eStoreAdmin')
         };
 
         $scope.edit = function(index) {
+            var collection =['name','description','category','price'];
             $scope.userIndex = index;
             $scope.userData={};
-            $scope.userData.name=$scope.products[index].name;
-            $scope.userData.description=$scope.products[index].description;
-            $scope.userData.category=$scope.products[index].category;
-            $scope.userData.price=$scope.products[index].price;
+            collection.forEach(function(item) {
+                $scope.userData[item]=$scope.products[index][item];
+            })
            
         };
 
@@ -104,11 +101,10 @@ angular.module('eStoreAdmin')
         };
         //for ngDisabled directive, ensures that user filled all input fields
         $scope.checkInput = function() {
-            if($scope.userData) {
-                return !($scope.userData.name && 
-                $scope.userData.description && 
-                $scope.userData.category && 
-                $scope.userData.price)
+            var data = $scope.userData;
+            if(data) {
+                var condition = data.name && data.description && data.category && data.price;
+                return !(condition)
             } else {
                 return true
             }
