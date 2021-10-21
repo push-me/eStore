@@ -11,7 +11,6 @@ angular.module('eStoreAdmin')
                     if(!firebase.auth().currentUser) return '/login'
                 },
                 templateUrl:function() {
-                    console.log(firebase.auth().currentUser);
                     if(firebase.auth().currentUser) return 'view/adminMain.html'
                 }
             })
