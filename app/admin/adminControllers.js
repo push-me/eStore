@@ -101,11 +101,10 @@ angular.module('eStoreAdmin')
         };
         //for ngDisabled directive, ensures that user filled all input fields
         $scope.checkInput = function() {
-            if($scope.userData) {
-                return !($scope.userData.name && 
-                $scope.userData.description && 
-                $scope.userData.category && 
-                $scope.userData.price)
+            var data = $scope.userData;
+            if(data) {
+                var condition = data.name && data.description && data.category && data.price;
+                return !(condition)
             } else {
                 return true
             }
