@@ -36,7 +36,6 @@ angular.module('eStore')
             }).then(function(snapshot) { //success
                 $scope.data.products = snapshot.val();            
                 $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
-                console.log(snapshot.val());
                 changePath('/products',$scope.data.products);
             }).catch(function(error) {
                 console.log('errorCode: '+ error.code);

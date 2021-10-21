@@ -4,13 +4,10 @@ angular.module('eStoreAdmin')
     .controller('authCtrl', ['$scope','$location',function authCtrl($scope,$location) {
         //user authentication
         $scope.authenticate = function(email,password) {
-            console.log('before sending')
             firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
                 //signed in
-                console.log('success');
                 $location.path('/main');
                 $scope.$apply();
-           
             })
             .catch(function(error) {
                 $scope.authenticationError = error;
