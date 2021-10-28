@@ -1,6 +1,146 @@
+/*smaller than 550  */
 #loginForm {
-    margin:auto;
-    width:35%;
-    margin-top: 20vh;
+    min-height:490px;
+    min-width:190px;
 }
 
+td[name] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    margin: 0;
+}
+
+#btnMenu {
+    max-width:100%;
+    display:flex;
+    padding: 0;
+}
+
+.header {
+    display: none;
+}
+
+#inputs {
+    position:fixed;
+    bottom: 0;
+    background:#e4d5d5;
+}
+
+#inputs > td[name] > button:nth-child(1) {
+    margin:0 auto;
+}
+
+#inputs > td[name] {
+    padding:0 0.75rem;
+}
+
+#inputs>td {
+    padding: 0;
+}
+
+tr {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    text-align:center;
+    margin-top: 0.5em;
+    border:1px solid black;
+}
+
+#tablePH {
+    padding: 0;
+}
+
+#infoInput {
+    display: none;
+}
+
+/*550px and higher  */
+@media (min-width:550px) {
+
+    td[name] {
+        border: none;
+        min-width: 160px;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    td[name]>button:last-child {
+        margin-left:18%;
+    }
+
+    #inputs {
+        position:static;
+        bottom: auto;
+        background:none;
+    }
+
+    #inputs>td {
+        padding: .75rem;
+    }
+
+
+    #loginForm {
+        margin:auto;
+        width:35%;
+        margin-top: 20vh;
+    }
+
+    tr {
+        display: table-row !important;
+        width: 100%;
+        text-align:left;
+        border: none;
+    }
+
+    input {
+        width:75%;
+    }
+
+    .row {
+        flex-direction:column;
+        margin: 0 -15px;
+    }
+
+    #infoInput {
+        display: block;
+    }
+
+    
+
+    #tablePH {
+        max-width: 100%;
+        padding: 1.25rem;
+
+    }
+}
+/*992px and higher  */
+@media (min-width:992px) {
+
+    #btnMenu {
+        max-width:16.6%;
+        display:block;
+    }
+
+    .row {
+        flex-direction:row;
+    }
+
+    #loginForm {
+        margin:auto;
+        width:35%;
+        margin-top: 20vh;
+    }
+
+    input {
+        width:75%;
+    }
+
+    #tablePH {
+        max-width: 83.3%;
+    }
+}
