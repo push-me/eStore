@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('eStore',['returnUnique','cart', 'ngRoute','ngAnimate']);
+angular.module('eStore',['returnUnique','cart', 'ngRoute','ngAnimate','database']);

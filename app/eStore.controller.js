@@ -2,11 +2,12 @@
 
 angular.module('eStore')
     .controller('eStoreController',[
+        'database',
         '$scope',
         'returnUniqueFilter',
         'cart',
         '$location', 
-        function($scope,returnUniqueFilter, cart,$location) {
+        function(database,$scope,returnUniqueFilter, cart,$location) {
         $scope.data={};
 
         var changePath = function(path,expression) {
@@ -14,27 +15,29 @@ angular.module('eStore')
             $scope.$apply(expression);
         };
 
+        var complete = function(error) {
+            if(error) {
+                console.log('write failed');
+            } else {  
+                $scope.cartData = [];
+                changePath('/complete',$scope.cartData);
+            }
+            
+        }
+
         $scope.sendOrder = function(data) {
             var order = angular.copy(data);
             order.products = angular.copy(cart.getProducts());
-            var orderKey = firebase.database().ref().push().key;// unique key generation
+            var orderKey = database.keyGen();// unique key generation
+            $scope.orderKey = orderKey;
             //Connect to database to make a record
-            firebase.database().ref('orders/'+ orderKey).set(order, function(error) {
-                if(error) {
-                    $scope.data.orderError = error;
-                } else { //success
-                    $scope.orderKey = orderKey;
-                    $scope.cartData = [];
-                    changePath('/complete',$scope.cartData);
-                }
-            })
+            var ref = 'orders/' + orderKey;
+            database.create(ref,order,complete);
         };
 
         $scope.getData = function() {
-           return firebase.auth().signInAnonymously().then(function() {
-                return firebase.database().ref('storeData').once('value');
-            }).then(function(snapshot) { //success
-                $scope.data.products = snapshot.val();            
+            database.read('storeData').then(function(response) {
+                $scope.data.products = response;
                 $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
                 changePath('/products',$scope.data.products);
             }).catch(function(error) {
