@@ -1,5 +1,5 @@
 <div class="row" ng-controller="mainCtrl">
-    <div class="col-md-2">
+    <div id="btnMenu" class="col-md-2">
         <button 
         ng-repeat="screenName in screens"
         ng-click="setScreen($index)"
@@ -7,7 +7,7 @@
             {{screenName}}
         </button>
     </div>
-    <div class="col-md-auto bg-light card-body">
+    <div id="tablePH" class="col-md-10 bg-light card-body">
         <div ng-include ="getScreen()"></div>
     </div>
 </div>

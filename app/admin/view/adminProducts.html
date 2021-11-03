@@ -1,6 +1,6 @@
 <div ng-controller="productCtrl" ng-init="getProducts()">
     <table class="table table-striped table-bordered">
-        <tr>
+        <tr class="header">
             <th>Name</th>
             <th>Description</th>
             <th>Category</th>
@@ -21,23 +21,24 @@
                 </button>
             </td>
         </tr>
-        <tr>
-            <td><input type="text" ng-model="userData.name"></td>
-            <td><input type="text" ng-model="userData.description"></td>
-            <td><input type="text" ng-model="userData.category"></td>
-            <td><input type="text" ng-model="userData.price"></td>
-            <td>
+        <tr id="inputs">
+            <td><input placeholder="Name" type="text" ng-model="userData.name"></td>
+            <td><input placeholder="Description" type="text" ng-model="userData.description"></td>
+            <td><input placeholder="Category" type="text" ng-model="userData.category"></td>
+            <td><input placeholder="Price" type="text" ng-model="userData.price"></td>
+            <td name="btns">
                 <button ng-hide="userIndex" ng-disabled="checkInput()" ng-click="create()" class="btn btn-sm btn-primary">
                     Create
                 </button>
                 <button ng-show="userIndex" ng-click="cancelEdit()" class="btn btn-sm btn-primary">
                     Cancel
                 </button>
+
                 <button ng-show="userIndex" ng-click="saveEdited(products[userIndex].id,userIndex)" class="btn btn-sm btn-primary">
-                    Save Edited
+                    Save
                 </button>
             </td>
         </tr>
     </table>
-    <div ng-show=checkInput() class="alert alert-primary text-center">Please, fill all the fields to create a new product</div>
+    <div id="infoInput" ng-show=checkInput() class="alert alert-primary text-center">Please, fill all the fields to create a new product</div>
 </div>
