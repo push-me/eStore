@@ -1,40 +1,45 @@
 'use strict';
 
-angular.module('eStore').
+angular.module('database').
     factory('database',[function() {
         return {
+            signIn:function(provider, data) {
+                if(provider === 'email') {
+                    return firebase.auth().signInWithEmailAndPassword(data.email, data.password);
+                } else {//anonymous
+                    return firebase.auth().signInAnonymously();
+                }
+                
+            },
             read:function(reference) {
-                return firebase.auth().signInAnonymously().then(function() {
-                    return firebase.database().ref(reference).once('value');
-                }).then(function(snapshot) { //success
-                    return snapshot.val();            
-                }).catch(function(error) {
-                    console.log('errorCode: '+ error.code);
-                    console.log('error message: ' + error.message);
-                })
+                    //return this.signIn.then(function() {
+                    return firebase.database().ref(reference).once('value').then(function(snapshot) { //success
+                        return snapshot.val();            
+                    }).catch(function(error) {
+                        console.log('errorCode: '+ error.code);
+                        console.log('error message: ' + error.message);
+                    })
             },
             create: function(reference, body, callback) {
                 firebase.database().ref(reference).set(body, callback);
             },
 
-            update:function(reference, body) {
-                firebase.database().ref(reference).update(body, function(error) {
-                    if(error) {
-                        $scope.data.orderError = error;
-                    } else { //success
-                        $scope.orderKey = orderKey;
-                        $scope.cartData = [];
-                        changePath('/complete',$scope.cartData);
-                    }
-                })
+            delete:function(reference) {
+                return firebase.database().ref(reference).remove();      
             },
-            //convert JSON to array
-            parse: function() {
-                return '';
+
+            update:function(reference, body,callback) {
+                firebase.database().ref(reference).update(body, callback);
+            },
+            //wraps object values into array
+            parse: function(data) {
+                var arr=[];
+                arr = Object.keys(data).map(function(key){return data[key]});
+                return arr;
             },
 
             keyGen: function() {
-                return firebase.database().ref().push().key
+                return firebase.database().ref().push().key;
             }
         }
     }])

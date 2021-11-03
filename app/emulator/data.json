@@ -84,53 +84,61 @@
       "zip" : 2222
     }
   },
-  "storeData" : [ {
+  "storeData" : {
+    "-MnQG_bLDRoWaUvkY9bN": {
     "category" : "bikes",
     "description" : "perfect for tricks",
-    "id" : 1,
+    "id" : "-MnQG_bLDRoWaUvkY9bN",
     "name" : "BMX bike e500",
     "price" : 3
-  }, {
+    }, 
+    "-MnQG_tgSPSjiCaM922j":{
     "category" : "bikes",
     "description" : "perfect for urban travel",
-    "id" : 2,
+    "id" : "-MnQG_tgSPSjiCaM922j",
     "name" : "electric bike",
     "price" : 2
-  }, {
+    },
+    "-MnQG_xC24QRG4Pn5YhO": {
     "category" : "bikes",
     "description" : "a bike for kids",
-    "id" : 3,
+    "id" : "-MnQG_xC24QRG4Pn5YhO",
     "name" : "butterfly",
     "price" : 5
-  }, {
+    },
+    "-MnQG_zwrhYvPFg3jU4L": {
     "category" : "bikes",
     "description" : "a bike that allows you to improve your figure",
-    "id" : 4,
+    "id" : "-MnQG_zwrhYvPFg3jU4L",
     "name" : "fitness bike",
     "price" : 2
-  }, {
+    },
+    "-MnQGa1pFWRtqAlcMwSk": {
     "category" : "soccer",
     "description" : "FIFA-approved size and weight",
-    "id" : 5,
+    "id" : "-MnQGa1pFWRtqAlcMwSk",
     "name" : "succer ball",
     "price" : 25.95
-  }, {
+    },
+    "-MnQGa4RB5OAjKB1T4rG": {
     "category" : "soccer",
     "description" : "gives your playing field a professional touch",
-    "id" : 6,
+    "id" : "-MnQGa4RB5OAjKB1T4rG",
     "name" : "corner flags",
     "price" : 15.99
-  }, {
+    },
+    "-MnQHQ2pZstLTsfjeq96": {
     "category" : "chess",
     "description" : "Improves your brain efficiency by 75%",
-    "id" : 7,
+    "id" : "-MnQHQ2pZstLTsfjeq96",
     "name" : "Thinking cap",
     "price" : 15
-  }, {
+    },
+    "-MnQHdlpJcjzdbf6DALL": {
     "category" : "chess",
     "description" : "a fun game for the family",
-    "id" : 8,
+    "id" : "-MnQHdlpJcjzdbf6DALL",
     "name" : "unstead chair",
     "price" : 25.99
-  } ]
+  } }
 }

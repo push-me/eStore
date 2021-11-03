@@ -16,7 +16,7 @@
                 <button ng-click="edit($index)" class="btn btn-sm btn-primary">
                     Edit
                 </button>
-                <button ng-click="delete($index)" class="btn btn-sm btn-primary">
+                <button ng-click="delete(product.id,$index)" class="btn btn-sm btn-primary">
                     Delete
                 </button>
             </td>
@@ -33,7 +33,7 @@
                 <button ng-show="userIndex" ng-click="cancelEdit()" class="btn btn-sm btn-primary">
                     Cancel
                 </button>
-                <button ng-show="userIndex" ng-click="saveEdited(userIndex)" class="btn btn-sm btn-primary">
+                <button ng-show="userIndex" ng-click="saveEdited(products[userIndex].id,userIndex)" class="btn btn-sm btn-primary">
                     Save Edited
                 </button>
             </td>

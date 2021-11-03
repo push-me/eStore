@@ -14,7 +14,7 @@ angular.module('eStore')
             $location.path(path);
             $scope.$apply(expression);
         };
-
+        //callback for create operation
         var complete = function(error) {
             if(error) {
                 console.log('write failed');
@@ -36,14 +36,18 @@ angular.module('eStore')
         };
 
         $scope.getData = function() {
-            database.read('storeData').then(function(response) {
-                $scope.data.products = response;
-                $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
-                changePath('/products',$scope.data.products);
-            }).catch(function(error) {
-                console.log('errorCode: '+ error.code);
-                console.log('error message: ' + error.message);
+            database.signIn().then(function() {
+                database.read('storeData').then(function(response) {
+                    console.log(database.parse(response));
+                    $scope.data.products = database.parse(response);//[{},{}]
+                    $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
+                    changePath('/products',$scope.data.products);
+                }).catch(function(error) {
+                    console.log('errorCode: '+ error.code);
+                    console.log('error message: ' + error.message);
+                })
             })
+            
         }
         
     }])
