@@ -12,11 +12,16 @@ td[name] {
 .row {
     margin: 0;
 }
+#btnMenu button {
+    margin-top:auto;
+}
 
 #btnMenu {
     max-width:100%;
     display:flex;
     padding: 0;
+    position:fixed;
+    z-index:1;
 }
 
 .header {
@@ -24,9 +29,9 @@ td[name] {
 }
 
 #inputs {
-    position:fixed;
-    bottom: 0;
     background:#e4d5d5;
+    bottom:0;
+    position: sticky;
 }
 
 #inputs > td[name] > button:nth-child(1) {
@@ -61,8 +66,12 @@ tr {
 /*550px and higher  */
 @media (min-width:550px) {
 
+    #btnMenu {
+        position:initial;
+        z-index:0;
+    }
+
     td[name] {
-        border: none;
         min-width: 160px;
         text-align: center;
         vertical-align: middle;
