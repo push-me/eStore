@@ -14,17 +14,19 @@ td[name] {
 }
 #btnMenu button {
     margin-top:auto;
+    box-shadow:2px 2px grey;
 }
 
 #btnMenu {
     max-width:100%;
     display:flex;
     padding: 0;
-    position:fixed;
+    position:sticky;
     z-index:1;
+    top: 0;
 }
 
-.header {
+.header, #orders tr:nth-child(1) {
     display: none;
 }
 
@@ -62,9 +64,31 @@ tr {
 #infoInput {
     display: none;
 }
+/*orders  */
+#orderDetails {
+    position:sticky;
+    bottom: 0;
+    max-height:300px;
+    overflow-y: scroll;
+    background: #e4d5d5;
+}
+
+#orderDetails> h3 {
+    display: none;
+}
+
+#orderDetails tr:nth-child(1) {
+    display: none;
+}
+
 
 /*550px and higher  */
 @media (min-width:550px) {
+
+    #orders td {
+        vertical-align:middle;
+        text-align:center;
+    }
 
     #btnMenu {
         position:initial;
@@ -102,7 +126,7 @@ tr {
     tr {
         display: table-row !important;
         width: 100%;
-        text-align:left;
+        text-align:center;
         border: none;
     }
 
@@ -112,7 +136,7 @@ tr {
 
     .row {
         flex-direction:column;
-        margin: 0 -15px;
+       
     }
 
     #infoInput {
@@ -124,15 +148,38 @@ tr {
     #tablePH {
         max-width: 100%;
         padding: 1.25rem;
+        margin-top: 0.3em;
 
     }
+
+    /*orders  */
+    #orderDetails {
+        position:static;
+        bottom: 0;
+        max-height:fit-content;
+        overflow-y: auto;
+        background:none;
+    }
+
+#orderDetails> h3 {
+    display: block;
+}
+
+#orderDetails tr:nth-child(1) {
+    display: table-row;
+}
+
 }
 /*992px and higher  */
 @media (min-width:992px) {
 
     #btnMenu {
-        max-width:16.6%;
+        max-width:16.0%;
         display:block;
+    }
+
+    #btnMenu button {
+        margin-top:0.5rem;
     }
 
     .row {
@@ -151,5 +198,6 @@ tr {
 
     #tablePH {
         max-width: 83.3%;
+        margin-left: 0.6%;
     }
 }
