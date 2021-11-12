@@ -81,6 +81,11 @@ tr {
     display: none;
 }
 
+#orders button:focus {
+    background: #ff5200;
+    outline:4px solid black;
+    border-color: black;
+}
 
 /*550px and higher  */
 @media (min-width:550px) {
