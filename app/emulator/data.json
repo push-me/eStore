@@ -80,6 +80,21 @@
         "id" : 3,
         "name" : "butterfly",
         "price" : 5
+      }, {
+        "count" : 1,
+        "id" : 3,
+        "name" : "Thinking cap",
+        "price" : 15
+      }, {
+        "count" : 1,
+        "id" : 3,
+        "name" : "unstead chair",
+        "price" : 25.99
+      }, {
+        "count" : 1,
+        "id" : 3,
+        "name" : "electric bike",
+        "price" : 2
       } ],
       "zip" : 2222
     }
