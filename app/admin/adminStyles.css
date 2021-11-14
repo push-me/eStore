@@ -69,8 +69,15 @@ tr {
     position:sticky;
     bottom: 0;
     max-height:300px;
-    overflow-y: scroll;
+    overflow-x: scroll;
     background: #e4d5d5;
+}
+
+#orderDetails tbody {
+    display: flex;
+}
+#orderDetails tbody tr {
+    flex-shrink: 0;
 }
 
 #orderDetails> h3 {
@@ -162,17 +169,25 @@ tr {
         position:static;
         bottom: 0;
         max-height:fit-content;
-        overflow-y: auto;
+        overflow-x: auto;
         background:none;
     }
 
-#orderDetails> h3 {
-    display: block;
-}
+    #orderDetails tbody {
+        display: table-row-group;
+    }
 
-#orderDetails tr:nth-child(1) {
-    display: table-row;
-}
+    #orderDetails tbody tr {
+        flex-shrink: initial;
+    }
+
+    #orderDetails> h3 {
+        display: block;
+    }
+
+    #orderDetails tr:nth-child(1) {
+        display: table-row;
+    }
 
 }
 /*992px and higher  */
