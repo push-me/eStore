@@ -71,9 +71,11 @@ angular.module('eStoreAdmin')
             $scope.selectedOrder = order;
         }
 
-        //behavior
         $scope.setDetailsBtnClass = function(id) {
-            return $scope.selectedOrder.id == id? 'btn btn-primary detailsPressed':'btn btn-primary';
+            if($scope.selectedOrder) {// check existence
+                return $scope.selectedOrder.id == id? 'btn btn-primary detailsPressed':'btn btn-primary';
+            } else return
+            
         }
     }])
     .controller('productCtrl', ['database','$scope', function(database,$scope) {
