@@ -44,16 +44,19 @@ angular.module('eStoreAdmin')
     .controller('orderCtrl', ['database','$scope',function(database,$scope) {
         $scope.orders = [];
         //request orders from the database
-        database.read('orders/').then(function(response) {
+        $scope.getOrders = function() {
+            database.read('orders/').then(function(response) {
             
-            var dataObj = database.parse(response);
-             angular.forEach(dataObj, function(key) {
-                $scope.orders.push(key);
-             });
-             $scope.$apply($scope.orders); 
-        },function error(error) {
-            $scope.orders.error=error;
-        })
+                var dataObj = database.parse(response);
+                 angular.forEach(dataObj, function(value, key) {
+                    value.id = key;
+                    $scope.orders.push(value);
+                 });
+                 $scope.$apply($scope.orders); 
+            },function error(error) {
+                $scope.orders.error=error;
+            })
+        }  
         
         $scope.countTotal = function(order) {
             var result=0;
