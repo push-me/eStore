@@ -12,7 +12,12 @@
             <td>{{obj.city}}</td>
             <td>{{countTotal(obj) | currency}}</td>
             <td>
-                <button class="btn btn-primary" ng-click="selectOrder(obj)">Details</button>
+                <button 
+                class="btn btn-primary" 
+                ng-click="selectOrder(obj)"
+                ng-class="setDetailsBtnClass(obj.id)">
+                    Details
+                </button>
             </td>
         </tr>
     </table>

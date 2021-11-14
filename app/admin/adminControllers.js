@@ -70,6 +70,11 @@ angular.module('eStoreAdmin')
         $scope.selectOrder = function(order) {
             $scope.selectedOrder = order;
         }
+
+        //behavior
+        $scope.setDetailsBtnClass = function(id) {
+            return $scope.selectedOrder.id == id? 'btn btn-primary detailsPressed':'btn btn-primary';
+        }
     }])
     .controller('productCtrl', ['database','$scope', function(database,$scope) {
         //request all data from the database

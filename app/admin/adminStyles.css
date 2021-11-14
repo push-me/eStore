@@ -81,9 +81,9 @@ tr {
     display: none;
 }
 
-#orders button:focus {
+.detailsPressed {
     background: #ff5200;
-    outline:4px solid black;
+    outline:4px solid black !important;
     border-color: black;
 }
 
