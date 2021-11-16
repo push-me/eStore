@@ -1,0 +1,95 @@
+/*550px and higher  */
+@media (min-width:550px) {
+
+    #orders td {
+        vertical-align:middle;
+        text-align:center;
+    }
+
+    td[name] {
+        min-width: 160px;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    td[name]>button:last-child {
+        margin-left:18%;
+    }
+
+    #inputs {
+        position:static;
+        bottom: auto;
+        background:none;
+    }
+
+    #inputs>td {
+        padding: .75rem;
+    }
+
+
+    #loginForm {
+        margin:auto;
+        width:35%;
+        margin-top: 20vh;
+    }
+
+    tr {
+        display: table-row !important;
+        width: 100%;
+        text-align:center;
+        border: none;
+    }
+
+    input {
+        width:75%;
+    }
+
+    .row {
+        flex-direction:column;
+       
+    }
+
+    #infoInput {
+        display: block;
+    }
+
+    
+
+    #tablePH {
+        max-width: 100%;
+        padding: 1.25rem;
+        margin-top: 0.3em;
+
+    }
+
+    /*orders  */
+    #orderDetails {
+        position:static;
+        bottom: 0;
+        max-height:fit-content;
+        overflow-x: auto;
+        background:none;
+    }
+
+    #orderDetails > table {
+        display: table;
+    }
+
+    #orderDetails tbody {
+        display: table-row-group;
+    }
+
+    #orderDetails tbody tr {
+        flex-shrink: initial;
+    }
+
+    #orderDetails> h3 {
+        display: block;
+    }
+
+    #orderDetails tr:nth-child(1) {
+        display: table-row;
+    }
+
+}

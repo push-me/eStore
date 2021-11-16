@@ -1,0 +1,32 @@
+/*992px and higher  */
+@media (min-width:992px) {
+
+    #btnMenu {
+        max-width:16.0%;
+        display:block;
+        height: 100vh;
+    }
+
+    #btnMenu button {
+        margin-top:0.5rem;
+    }
+
+    .row {
+        flex-direction:row;
+    }
+
+    #loginForm {
+        margin:auto;
+        width:35%;
+        margin-top: 20vh;
+    }
+
+    input {
+        width:75%;
+    }
+
+    #tablePH {
+        max-width: 83.3%;
+        margin-left: 0.6%;
+    }
+}

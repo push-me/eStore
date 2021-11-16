@@ -1,0 +1,98 @@
+/*smaller than 550  */
+#loginForm {
+    min-height:490px;
+    min-width:190px;
+}
+
+td[name] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    margin: 0;
+}
+#btnMenu button {
+    margin-top:auto;
+    box-shadow:2px 2px grey;
+}
+
+#btnMenu {
+    max-width:100%;
+    display:flex;
+    padding: 0;
+    position:sticky;
+    z-index:1;
+    top: 0;
+}
+
+.header, #orders tr:nth-child(1) {
+    display: none;
+}
+
+#inputs {
+    background:#e4d5d5;
+    bottom:0;
+    position: sticky;
+}
+
+#inputs > td[name] > button:nth-child(1) {
+    margin:0 auto;
+}
+
+#inputs > td[name] {
+    padding:0 0.75rem;
+}
+
+#inputs>td {
+    padding: 0;
+}
+
+tr {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    text-align:center;
+    margin-top: 0.5em;
+    border:1px solid black;
+}
+
+#tablePH {
+    padding: 0;
+}
+
+#infoInput {
+    display: none;
+}
+/*orders  */
+#orderDetails {
+    position:sticky;
+    bottom: 0;
+    overflow-x: scroll;
+    background: #e4d5d5;
+}
+
+#orderDetails > table {
+    display: block;
+}
+
+#orderDetails tbody {
+    display: flex;
+}
+#orderDetails tbody tr {
+    flex-shrink: 0;
+}
+
+#orderDetails> h3 {
+    display: none;
+}
+
+#orderDetails tr:nth-child(1) {
+    display: none;
+}
+
+.detailsPressed {
+    background: #ff5200;
+    outline:4px solid black !important;
+    border-color: black;
+}
