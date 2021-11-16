@@ -102,11 +102,6 @@ tr {
         text-align:center;
     }
 
-    #btnMenu {
-        position:initial;
-        z-index:0;
-    }
-
     td[name] {
         min-width: 160px;
         text-align: center;
@@ -196,6 +191,7 @@ tr {
     #btnMenu {
         max-width:16.0%;
         display:block;
+        height: 100vh;
     }
 
     #btnMenu button {
