@@ -68,9 +68,12 @@ tr {
 #orderDetails {
     position:sticky;
     bottom: 0;
-    max-height:300px;
     overflow-x: scroll;
     background: #e4d5d5;
+}
+
+#orderDetails > table {
+    display: block;
 }
 
 #orderDetails tbody {
@@ -166,6 +169,10 @@ tr {
         max-height:fit-content;
         overflow-x: auto;
         background:none;
+    }
+
+    #orderDetails > table {
+        display: table;
     }
 
     #orderDetails tbody {
