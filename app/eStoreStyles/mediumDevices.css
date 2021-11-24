@@ -1,0 +1,25 @@
+@media (min-width:550px) {
+    #navigationBar>a {
+        display: inline-block;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    #categoriesMenuContainer {
+        display: none;
+    }
+
+    h3 {
+        font-size: 1.75rem !important;
+    }
+
+    #cartWidget {
+        width: auto;
+    }
+
+    #navigationBar {
+        flex-wrap: unset;
+    }
+}

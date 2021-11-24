@@ -2,7 +2,7 @@
 
     <div class="card-body">
       <div class="row">
-        <div class="col">
+        <div id="navigation" class="col">
           <button 
           class="btn btn-block btn-light btn-lg" 
           ng-click=selectCategory()>
@@ -17,7 +17,7 @@
           </button>
         </div>
 
-        <div class="col">
+        <div id="products" class="col">
           <div 
           class="card prodList mb-3 bg-light flex-row justify-content-between" 
           ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:totalPages">

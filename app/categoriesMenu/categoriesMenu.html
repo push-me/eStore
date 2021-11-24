@@ -1,0 +1,15 @@
+<div class="dropdown">
+    <button 
+    id="navDropdown" 
+    type="button" 
+    class="btn btn-secondary btn-lg dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-expended="false">
+      {{getCategory()}}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="navDropDown">
+      <li ng-repeat="category in uniqueCategories | orderBy:'category'">
+        <button class="dropdown-item" ng-click=selectCategory(category)>{{category}}</button>
+      </li>
+    </ul>
+  </div>

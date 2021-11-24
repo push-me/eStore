@@ -1,0 +1,39 @@
+#navigationBar>a {
+    display: none;
+}
+
+#navDropdown {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+#cartWidget>div {
+    flex-direction: column;
+}
+
+#categoriesMenuContainer, #cartWidgetContainer, #cartWidget, #cartWidget a {
+    width: 100%;
+}
+
+#categoriesMenuContainer ul{
+    width: 100%;
+    text-align:center;
+}
+
+#cartWidget {
+    flex-direction: column;
+}
+
+#navigation {
+    display: none;
+}
+
+h3 {
+    font-size: 1.3rem !important;
+}
+
+#products div[ng-repeat] button {
+    height: 50px;
+    padding: 0;
+    width: 95px;
+}

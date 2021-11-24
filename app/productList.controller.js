@@ -6,12 +6,14 @@ angular.module('eStore').
         '$scope',
         'cart',
         'productListActiveClass',
-         function($scope, cart, productListActiveClass) {
-            var selectedCategory = null;
+        'category',
+         function($scope, cart, productListActiveClass,category) {
+            //var selectedCategory = null;
             $scope.selectedPage = 1;
             $scope.totalPages = 3;
             $scope.selectCategory = function(userChoise) {
-                selectedCategory = userChoise;
+                //selectedCategory = userChoise;
+                category.setCategory(userChoise);
                 $scope.selectedPage = 1;
             };
 
@@ -20,7 +22,8 @@ angular.module('eStore').
             };
 
             $scope.categoryFilterFn = function(productData) {
-                return selectedCategory == null || productData.category == selectedCategory
+                console.log(category.getCategory());
+                return category.getCategory() == null || productData.category == category.getCategory()
             };
 
             $scope.setSelectedClass = function(data) {
@@ -29,12 +32,18 @@ angular.module('eStore').
                     'btn btn-block btn-sm '+ productListActiveClass:
                     'btn btn-light btn-sm'
                 } else { //category-string
-                    return selectedCategory == data? 
+                    return category.getCategory() == data? 
                     'btn btn-block btn-lg '+ productListActiveClass :
                     'btn btn-block btn-light btn-lg'
                 }
  
             };
+
+            $scope.getCategory = function() {
+                if(category.getCategory()) {
+                    return category.getCategory();
+                } else return 'Categories';
+            }
 
             $scope.addToCart = function(item) {
                 cart.addProduct(item.id,item.name,item.price);

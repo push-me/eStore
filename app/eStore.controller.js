@@ -38,7 +38,6 @@ angular.module('eStore')
         $scope.getData = function() {
             database.signIn().then(function() {
                 database.read('storeData').then(function(response) {
-                    console.log(database.parse(response));
                     $scope.data.products = database.parse(response);//[{},{}]
                     $scope.uniqueCategories = returnUniqueFilter($scope.data.products,'category');
                     changePath('/products',$scope.data.products);
