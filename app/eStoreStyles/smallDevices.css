@@ -51,19 +51,7 @@ h3 {
     border-top: none;
 }
 
-.ng-invalid.ng-touched {
-    background-color: lightpink;
-}
-
-.ng-valid.ng-touched {
-    background-color: lightgreen;
-}
-
-span.error {
-    background-color: red;
-    font-weight: bold;
-}
-
+/* animation */
 .ngFade.ng-enter,.ngFade.ng-hide-remove{
     transition: 1s linear all;
     opacity:0;
@@ -130,6 +118,25 @@ span.error {
     margin-left: 1em;
 }
 
+.ng-invalid.ng-touched {
+    background-color: lightpink;
+}
+
+.ng-valid.ng-touched {
+    background-color: lightgreen;
+}
+
+span.error {
+    background-color: red;
+    font-weight: bold;
+}
+
 #placeOrderForm {
     width: 100%;
+}
+
+/* successTemplate */
+
+.orderSuccess {
+    text-align: center;
 }

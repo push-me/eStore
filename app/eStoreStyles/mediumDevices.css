@@ -36,4 +36,9 @@
     #placeOrderForm {
         width: 80%;
     }
+
+    /* successTemplate */
+    .orderSuccess {
+        text-align: left;
+    }
 }
