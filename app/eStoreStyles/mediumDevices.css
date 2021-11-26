@@ -30,4 +30,10 @@
     #checkoutTable tr:last-child a {
         padding: 0.8rem 3.3rem;
     }
+
+    /* placeOrder */
+
+    #placeOrderForm {
+        width: 80%;
+    }
 }
