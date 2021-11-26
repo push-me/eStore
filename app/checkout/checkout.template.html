@@ -1,5 +1,5 @@
 <h1 >Your Cart</h1>
-<table class="table" ng-controller="checkoutController">
+<table id="checkoutTable" class="table" ng-controller="checkoutController">
     <thead>
         <th scope="col">Quantity</th>
         <th scope="col">Item</th>
@@ -8,17 +8,17 @@
     </thead>
     <tbody>
         <tr ng-repeat="item in cartData">
-            <td>{{item.count}}</td>
-            <td>{{item.name}}</td>
-            <td>{{item.price | currency}}</td>
-            <td>{{item.price*item.count | currency}}</td>
+            <td><span class="labelCheckout">Quantity:</span><span>{{item.count}}</span></td>
+            <td><span class="labelCheckout">Item:</span><span>{{item.name}}</span></td>
+            <td><span class="labelCheckout">Price:</span><span>{{item.price | currency}}</span></td>
+            <td><span class="labelCheckout">Subtotal:</span><span>{{item.price*item.count | currency}}</span></td>
             <td class="removeBtnCell"><button class="btn btn-warning" ng-click="remove(item.id)">Remove</button></td>
         </tr>
-        <tr>
+        <tr class="summary">
             <td></td>
             <td></td>
             <td>Total:</td>
-            <td>{{countTotal() | currency}}</td>
+            <td><span>Total:</span>{{countTotal() | currency}}</td>
         </tr>
         <tr>
             <td colspan="4" class="text-center">

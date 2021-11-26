@@ -1,3 +1,29 @@
 @media (min-width:992px) {
-    
+    #checkoutTable thead {
+        display: table-header-group;
+    }
+
+    #checkoutTable tr:not(tr:last-child) {
+        display: table-row;
+        text-align: initial;
+        border: none;
+        margin-bottom: initial;
+    }
+
+    #checkoutTable td {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .labelCheckout {
+        display: none;
+    }
+
+    .summary td:not(td:last-child) {
+        display: table-cell !important;
+    }
+
+    .summary td:nth-child(4)>span {
+        display: none;
+    }
 }

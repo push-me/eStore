@@ -22,4 +22,12 @@
     #navigationBar {
         flex-wrap: unset;
     }
+    /* checkout */
+    #checkoutTable tr:last-child>td {
+        padding: 0.75rem;
+    }
+
+    #checkoutTable tr:last-child a {
+        padding: 0.8rem 3.3rem;
+    }
 }
