@@ -12,7 +12,6 @@ angular.module('database').
                 
             },
             read:function(reference) {
-                    //return this.signIn.then(function() {
                     return firebase.database().ref(reference).once('value').then(function(snapshot) { //success
                         return snapshot.val();            
                     }).catch(function(error) {

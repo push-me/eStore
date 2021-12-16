@@ -6,7 +6,7 @@ angular.module('eStore').
             if(angular.isArray(data)) {
                 var result =[];
                 for(var i=0; i<Math.ceil(data.length/itemsPerPage);i++) {
-                    result.push(i);
+                    result.push(i+1);
                 }
                 return result
             } else {

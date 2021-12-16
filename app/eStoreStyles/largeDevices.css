@@ -32,4 +32,9 @@
     #placeOrderForm {
         width: 50%;
     }
+
+    /* pagination */
+    #pagination .btn-sm {
+        padding: 0.7rem 0.9rem;
+    }
 }

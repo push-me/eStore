@@ -18,6 +18,11 @@
     #cartWidget {
         width: auto;
     }
+    #products div[ng-repeat] button {
+        height: 50px;
+        padding: 0;
+        width: 100%;
+    }
 
     #navigationBar {
         flex-wrap: unset;
@@ -41,4 +46,26 @@
     .orderSuccess {
         text-align: left;
     }
+
+    /* pagination */
+    #products {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pagination {
+        flex-grow: 1;
+    }
+
+    #pagination>pagination>div {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: flex-end;
+    }
+
+    #pagination .btn-sm {
+        padding: 0.25rem 0.5rem;
+    }
+
 }

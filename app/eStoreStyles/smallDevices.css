@@ -140,3 +140,41 @@ span.error {
 .orderSuccess {
     text-align: center;
 }
+
+/* pagination */
+
+.noShadow {
+    box-shadow: none !important;
+}
+
+.ellipsis {
+    align-self: flex-end;
+}
+
+#pagination>pagination>div {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#pagination .btn-sm {
+    padding: 0.2rem 0.8rem;
+}
+
+#pagination .hideBlock {
+    display: flex;
+}
+
+#pagination>pagination>div>button:first-child {
+    margin-right: 1rem;
+}
+
+#pagination>pagination>div>button:last-child {
+    margin-left: 1rem;
+}
+
+@media (max-width:450px) {
+    .hideBlock {
+        display: none !important;
+    }
+}

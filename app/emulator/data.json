@@ -155,5 +155,98 @@
     "id" : "-MnQHdlpJcjzdbf6DALL",
     "name" : "unstead chair",
     "price" : 25.99
-  } }
+    },
+    "-MqZZhDMbvTR7xe51VmM": {
+    "category" : "chess",
+    "description" : "standart pawn figure made of wood",
+    "id" : "-MqZZhDMbvTR7xe51VmM",
+    "name" : "wooden pawn",
+    "price" : 2
+    },
+    "-MqZ_bTCA0FsHeQOmrIg": {
+    "category" : "chess",
+    "description" : "rook figure made of wood",
+    "id" : "-MqZ_bTCA0FsHeQOmrIg",
+    "name" : "Wooden rook",
+    "price" : 3
+    },
+    "-MqZdaOIKjouyNnQqNpt": {
+    "category" : "chess",
+    "description" : "A single queen figure made of wood",
+    "id" : "-MqZdaOIKjouyNnQqNpt",
+    "name" : "Queen",
+    "price" : 6
+    },
+    "-MqZdiBG7lliVXd41zSd": {
+    "category" : "chess",
+    "description" : "lonely king figure made of wood",
+    "id" : "-MqZdiBG7lliVXd41zSd",
+    "name" : "King",
+    "price" : 6
+    },
+    "-MqZdu81oENlGetOA53-": {
+    "category" : "chess",
+    "description" : "A brave knight figure made of wood",
+    "id" : "-MqZdu81oENlGetOA53-",
+    "name" : "Knight",
+    "price" : 5
+    },
+    "-MqZekFXY06zRyKMLUF-": {
+    "category" : "chess",
+    "description" : "Bishop figure made of wood",
+    "id" : "-MqZekFXY06zRyKMLUF-",
+    "name" : "Bishop",
+    "price" : 5
+    },
+    "-MqZf-2XHX-rvlxiJkJp": {
+    "category" : "chess",
+    "description" : "standart chess set",
+    "id" : "-MqZf-2XHX-rvlxiJkJp",
+    "name" : "chess set",
+    "price" : 60
+    },
+    "-MqZfUjdOtV7fmkwfK55": {
+    "category" : "chess",
+    "description" : "a mini chess set, compact and light, so you can play chess anywhere",
+    "id" : "-MqZfUjdOtV7fmkwfK55",
+    "name" : "mini chess set",
+    "price" : 45
+    },
+    "-MqZfYV9F5LItr2awQMv": {
+    "category" : "chess",
+    "description" : "exclusive set made of ancient rocks",
+    "id" : "-MqZfYV9F5LItr2awQMv",
+    "name" : "elite chess set",
+    "price" : 1999
+    },
+    "-MqZg9VmAnvU5eH8_EpU": {
+    "category" : "chess",
+    "description" : "a book written by a very good chess player",
+    "id" : "-MqZg9VmAnvU5eH8_EpU",
+    "name" : "Play like a pro",
+    "price" : 155
+    },
+    "-MqZgaE7TeV-D6lp2o5-": {
+    "category" : "soccer",
+    "description" : "very convenient shorts",
+    "id" : "-MqZgaE7TeV-D6lp2o5-",
+    "name" : "soccer shorts",
+    "price" : 200
+    },
+    "-MqZhHDsH54ZDSgQwbN_": {
+    "category" : "ping-pong",
+    "description" : "red racket for everyone",
+    "id" : "-MqZhHDsH54ZDSgQwbN_",
+    "name" : " ping-pong racket",
+    "price" : 77
+    },
+    "-MqZiDjLZJhCg8saPhPB": {
+    "category" : "billiard",
+    "description" : "wooden cue",
+    "id" : "-MqZiDjLZJhCg8saPhPB",
+    "name" : "billiard cue",
+    "price" : 88
+    } 
+  }
+
 }
