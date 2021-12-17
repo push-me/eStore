@@ -4,15 +4,15 @@
       <div class="row">
         <div id="navigation" class="col">
           <button 
-          class="btn btn-block btn-light btn-lg" 
-          ng-click=selectCategory()>
+          ng-class="setSelectedClass('Home')" 
+          ng-click="selectCategory('Home')">
           Home
           </button>
 
           <button 
           ng-repeat="category in uniqueCategories | orderBy:'category'"
-          ng-click=selectCategory(category)
-          ng-class=setSelectedClass(category)>
+          ng-click="selectCategory(category)"
+          ng-class="setSelectedClass(category)">
             {{category}}
           </button>
         </div>

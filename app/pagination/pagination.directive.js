@@ -51,7 +51,7 @@ angular.module('eStore')
                     if(scope.data.products) {
                         var data = scope.data.products;
                         //for Home btn
-                        if(!cat) {
+                        if(cat=="Home") {
                             scope.pages = [];
                             data.forEach(function(item,index) {
                                 scope.pages.push(index+1);
@@ -66,8 +66,7 @@ angular.module('eStore')
                             scope.pages = pageCountFilter(result,itemsPerPage);
                             scope.lastPage = scope.pages.length;
                         }
-                       
-                    } else return 'no data'
+                    }
                 })
 
                 scope.$watch(function(){return scope.selectedPage}, function(page) {

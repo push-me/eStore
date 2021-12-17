@@ -24,7 +24,7 @@ angular.module('eStore').
             };
 
             $scope.categoryFilterFn = function(productData) {
-                return category.getCategory() == null || productData.category == category.getCategory()
+                return category.getCategory() == null || category.getCategory() == 'Home'  || productData.category == category.getCategory()
             };
 
             $scope.setSelectedClass = function(data) {
