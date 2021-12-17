@@ -50,18 +50,22 @@
     /* pagination */
     #products {
         display: flex;
+        display: -ms-flexbox;
         flex-direction: column;
     }
 
     #pagination {
         flex-grow: 1;
+        -ms-flex-positive:1;
     }
 
     #pagination>pagination>div {
         display: flex;
+        display: -ms-flexbox;
         justify-content: space-evenly;
         height: 100%;
         align-items: flex-end;
+        -ms-flex-align: end;
     }
 
     #pagination .btn-sm {

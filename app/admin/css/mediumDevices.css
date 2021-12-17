@@ -46,15 +46,12 @@
     }
 
     .row {
-        flex-direction:column;
-       
+        flex-direction:column;     
     }
 
     #infoInput {
         display: block;
     }
-
-    
 
     #tablePH {
         max-width: 100%;
