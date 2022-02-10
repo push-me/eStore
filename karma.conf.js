@@ -21,6 +21,10 @@ module.exports = function(config) {
        'returnUnique/returnUnique.filter.js',
        'range.filter/range.filter.js',
        'pageCount.filter/pageCount.filter.js',
+       'categoriesMenu/category.service.js',
+       'categoriesMenu/categoriesMenu.directive.js',
+       'pagination/pagination.service.js',
+       'pagination/pagination.directive.js',
        'checkout/checkout.controller.js',
        '*!(.module|.spec).js',
        '**/*.spec.js'

@@ -1,5 +1,5 @@
 'use strict';
-//used in pagnation, to calculate max number of pages for ngRepeat directive
+//used in pagination, to calculate max number of pages for ngRepeat directive
 angular.module('eStore').
     filter('pageCount',function() {
         return function(data, itemsPerPage) {

@@ -45,8 +45,8 @@ describe('productListControllerTest', function(){
      it('it should set class', function() {
          //when argument is number
         scope.selectedPage=2;
-        expect(scope.setSelectedClass(2)).toEqual('btn btn-block btn-sm '+ productListActiveClass);
-        expect(scope.setSelectedClass(1)).toEqual('btn btn-light btn-sm');
+        expect(scope.setSelectedClass(2)).toEqual('btn-sm noShadow '+ productListActiveClass);
+        expect(scope.setSelectedClass(1)).toEqual('btn-sm');
         //when argument is a string
         scope.selectCategory('football');
         expect(scope.setSelectedClass('football')).toEqual('btn btn-block btn-lg '+ productListActiveClass);
