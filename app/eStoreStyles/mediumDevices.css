@@ -43,7 +43,7 @@
     }
 
     /* successTemplate */
-    .orderSuccess {
+    .orderSuccess, #backToShoppingBtn {
         text-align: left;
     }
 

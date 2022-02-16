@@ -148,8 +148,12 @@ span.error {
 
 /* successTemplate */
 
-.orderSuccess {
+.orderSuccess,#backToShoppingBtn {
     text-align: center;
+}
+
+#backToShoppingBtn {
+    margin-top: 1rem;
 }
 
 /* pagination */
