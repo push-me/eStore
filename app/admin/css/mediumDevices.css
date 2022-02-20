@@ -50,7 +50,11 @@
     }
 
     #infoInput {
-        display: block;
+        display: block!important;
+    }
+
+    #infoInput.ng-hide:not(.ng-hide-animate) {
+        visibility: hidden;
     }
 
     #tablePH {

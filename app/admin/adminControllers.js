@@ -89,6 +89,7 @@ angular.module('eStoreAdmin')
         
         $scope.userData=null;//initial data(name,description,category,price) for input strings
         $scope.userIndex;// what product is selected for editing or deleting
+        $scope.productExists=false; //to make sure that the new product is unique
 
         $scope.saveEdited = function(id,index) {
             var obj = angular.copy($scope.userData);
@@ -98,6 +99,7 @@ angular.module('eStoreAdmin')
                 } else { //success
                     $scope.products[index] = angular.copy(obj);
                     $scope.userData=null;
+                    $scope.userIndex=null;
                     $scope.$apply($scope.products);
                 }
             });
@@ -132,14 +134,39 @@ angular.module('eStoreAdmin')
         $scope.checkInput = function() {
             var data = $scope.userData;
             if(data) {
-                var condition = data.name && data.description && data.category && data.price;
+                var condition = data.name && data.description && data.category && data.price && !$scope.productExists;
                 return !(condition)
             } else {
                 return true
             }
             
         };
-        //add new product
+        //handles info message
+        $scope.infoHandler = function() {
+            $scope.productExists = false;
+            if($scope.products) {
+                $scope.products.forEach(function(item) {
+                    if($scope.userData) {//info fields are not empty
+                        if(item.name == $scope.userData.name) {
+                            $scope.productExists = true; 
+                        }
+                    }
+                      
+                })
+
+                if($scope.productExists) return 'this product already exists';
+            }
+            
+            return 'please, fill all the fields to create a new product';
+        };
+        //behavior to switch classes for ng-class directive
+        $scope.showWarning = function() {
+            if($scope.productExists) {
+                return "alert alert-warning text-center"
+            }
+            return "alert alert-primary text-center"
+        };
+        //add a new product
         $scope.create = function() {
             $scope.userData.id = database.keyGen();
             database.create('storeData/'+$scope.userData.id,$scope.userData, function(error) {
@@ -147,8 +174,9 @@ angular.module('eStoreAdmin')
                     console.log('failed to create a product');
                 } else { //success
                     $scope.products.push($scope.userData);
-                    $scope.$apply($scope.products);
                     $scope.userData=null;
+                    $scope.$apply($scope.products);
+                    
                 }
                  
             })

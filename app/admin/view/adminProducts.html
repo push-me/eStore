@@ -40,5 +40,5 @@
             </td>
         </tr>
     </table>
-    <div id="infoInput" ng-show=checkInput() class="alert alert-primary text-center">Please, fill all the fields to create a new product</div>
+    <div id="infoInput" ng-show=checkInput() ng-class="showWarning()">{{infoHandler()}}</div>
 </div>
