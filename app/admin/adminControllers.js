@@ -108,7 +108,7 @@ angular.module('eStoreAdmin')
 
         $scope.edit = function(index) {
             var collection =['name','description','category','price'];
-            $scope.userIndex = index;
+            $scope.userIndex = index+'';
             $scope.userData={};
             collection.forEach(function(item) {
                 $scope.userData[item]=$scope.products[index][item];
