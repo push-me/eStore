@@ -100,6 +100,7 @@ angular.module('eStoreAdmin')
                     $scope.products[index] = angular.copy(obj);
                     $scope.userData=null;
                     $scope.userIndex=null;
+                    $scope.editing = false;
                     $scope.$apply($scope.products);
                 }
             });
@@ -112,12 +113,14 @@ angular.module('eStoreAdmin')
             collection.forEach(function(item) {
                 $scope.userData[item]=$scope.products[index][item];
             })
+            $scope.editing = true;
            
         };
 
         $scope.cancelEdit = function() {
             $scope.userData=null;
             $scope.userIndex=null;
+            $scope.editing = false;
         };
 
         $scope.delete = function(id,index) {
@@ -147,7 +150,7 @@ angular.module('eStoreAdmin')
             if($scope.products) {
                 $scope.products.forEach(function(item) {
                     if($scope.userData) {//info fields are not empty
-                        if(item.name == $scope.userData.name) {
+                        if(item.name == $scope.userData.name && !$scope.editing) {
                             $scope.productExists = true; 
                         }
                     }

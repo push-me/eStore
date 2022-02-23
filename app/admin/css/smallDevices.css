@@ -51,6 +51,10 @@ td[name] {
     padding: 0;
 }
 
+#inputs td:last-child>button {
+    transition: auto !important;
+}
+
 tr {
     display: flex;
     display: -ms-flexbox;
@@ -65,8 +69,13 @@ tr {
     padding: 0;
 }
 
-#infoInput {
+#infoInput:not(.ng-animate) {
     display: none;
+}
+
+#infoInput {
+    bottom: 0;
+    position: sticky;
 }
 /*orders  */
 #orderDetails {
@@ -102,3 +111,28 @@ tr {
     outline:4px solid black !important;
     border-color: black;
 }
+
+/* animation */
+@media (max-width:550px) {
+
+    #infoInput.alert-warning-add-active {
+        animation: 5s fade;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 1;
+        }
+    
+        to {
+            opacity: 0;
+        }
+    
+    }
+
+}
+
+
+
+
+

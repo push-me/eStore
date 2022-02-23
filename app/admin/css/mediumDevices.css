@@ -51,6 +51,8 @@
 
     #infoInput {
         display: block!important;
+        bottom: auto;
+        position: static;
     }
 
     #infoInput.ng-hide:not(.ng-hide-animate) {
@@ -91,6 +93,28 @@
 
     #orderDetails tr:nth-child(1) {
         display: table-row;
+    }
+
+
+    /* animation */
+    #infoInput.alert-warning-add-active {
+        animation: 0.2s highlight;
+    }
+
+    @keyframes highlight {
+        0% {
+            outline: 0px solid red;
+        }
+    
+        50% {
+            outline: 4px solid red;
+        }
+    
+        100% {
+            outline: 0px solid red;
+        }
+    
+    
     }
 
 }

@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('eStoreAdmin',['ngRoute','database']);
+angular.module('eStoreAdmin',['ngRoute','database','ngAnimate']);
