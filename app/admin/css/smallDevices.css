@@ -112,6 +112,10 @@ tr {
     border-color: black;
 }
 
+.detailsPressed:hover {
+    background: #ff5200 !important;
+}
+
 /* animation */
 @media (max-width:550px) {
 
