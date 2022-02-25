@@ -14,9 +14,9 @@ angular.module('eStore')
                 $scope.lastPage = 1;
 
                 $scope.dispPages = function(index) {
-                    if($scope.pages && index>4) {
+                    if($scope.pages && index>5) {
                         return true
-                    } else return false
+                    } else return false 
                 }
 
                 $scope.nextPage = function() {
@@ -35,11 +35,28 @@ angular.module('eStore')
             },
             link:function(scope) {
                 var itemsPerPage = paginationService.getItemsPerPage();
+                //generate array for ng-repeat directive,used in pagination
+                var makeBtns = function(page) {
+                    var length = scope.lastPage;
+                        scope.pages = [];
+                        for(var i=0;i<5;i++) {
+                            if(4<=page && page <= length-3) {
+                                scope.pages.push(page+i-2);
+                            } else if(page<=4 && i<length){
+                                scope.pages.push(i+1);
+                            } else if(length>i) {
+                                scope.pages.push(length-4+i);
+                            }
+                        }
+                }
+
                 scope.$watch(function(){return scope.data.products},function(data) {
                     //initial state, when data is loaded
-                    scope.pages = pageCountFilter(angular.copy(data),itemsPerPage);
-                    if(scope.pages) {
-                        scope.lastPage = scope.pages.length;
+                    var totalPages;
+                    totalPages = pageCountFilter(angular.copy(data),itemsPerPage);
+                    if(totalPages) {
+                        scope.lastPage = totalPages.length;
+                        scope.selectedPage = 1;//trigger changes
                     }
                     
                 })
@@ -52,11 +69,9 @@ angular.module('eStore')
                         var data = scope.data.products;
                         //for Home btn
                         if(cat=="Home") {
-                            scope.pages = [];
-                            data.forEach(function(item,index) {
-                                scope.pages.push(index+1);
-                            })
-                            scope.lastPage = scope.pages.length;
+                            var pages = pageCountFilter(angular.copy(data),itemsPerPage);
+                            scope.lastPage = pages.length;
+                            makeBtns(1);             
                         } else {
                             data.forEach(function(item,index) {
                                 if(item.category == cat) {
@@ -71,18 +86,7 @@ angular.module('eStore')
 
                 scope.$watch(function(){return scope.selectedPage}, function(page) {
                     //select page
-                    var length = scope.lastPage;
-                        scope.pages = [];
-
-                        for(var i=0;i<5;i++) {
-                            if(4<page && page <= length-4) {
-                                scope.pages.push(page+i-2);
-                            } else if(page <=4) {
-                                scope.pages.push(i+1);
-                            } else {
-                                scope.pages.push(length-4+i);
-                            }
-                        }
+                    makeBtns(page);
                 })
             }
         }

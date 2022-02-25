@@ -21,7 +21,6 @@
 
         <button 
         ng-repeat="page in pages"
-        ng-hide="dispPages($index)"
         ng-class="setSelectedClass(page)"
         ng-click="selectPage(page)">
         {{page}}
