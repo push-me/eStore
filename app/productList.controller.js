@@ -9,7 +9,7 @@ angular.module('eStore').
         'category',
         'paginationService',
          function($scope, cart, productListActiveClass,category,paginationService) {
-            $scope.selectedPage = null;
+            $scope.selectedPage = 1;
             $scope.totalPages = paginationService.getItemsPerPage();
             $scope.selectCategory = function(userChoise) {
                 if(!userChoise) {
