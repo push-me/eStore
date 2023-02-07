@@ -10,7 +10,7 @@ angular.module('eStore').
         'paginationService',
          function($scope, cart, productListActiveClass,category,paginationService) {
             $scope.selectedPage =  null;
-            category.selectCategory('Home');
+            $scope.selectCategory('Home');
             $scope.totalPages = paginationService.getItemsPerPage();
             $scope.selectCategory = function(userChoise) {
                 if(!userChoise) {
